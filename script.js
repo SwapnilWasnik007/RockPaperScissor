@@ -115,7 +115,9 @@ function playgame(playerselection){
     let playerMove = props.filter(x => x.name == playerselection);
     let computerSelection = getComputerMove();
     if(playerselection == computerSelection.name){
-        result.innerText = "Draw";
+        setTimeout(() =>{
+            result.innerText = "Draw";
+        }, 2000);
     }else{
     if(playerselection == computerSelection.canbeat ){
         setTimeout(() =>{
