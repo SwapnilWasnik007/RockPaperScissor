@@ -58,10 +58,6 @@ function getComputerMove(){
         }
     }, 2000);
 
-    // computer.innerHTML = `
-    // <div>${props[i].emoji}</div>
-    // <div>${props[i].name}</div>
-    // `;
     return props[i];
 }
 
@@ -83,6 +79,7 @@ function resetGame(){
     computerRockImgComp.setAttribute('hidden', true);
     computerScissorImgComp.setAttribute('hidden', true);
     computerPaperImgComp.setAttribute('hidden', true);
+    result.innerText = "";
 }
 
 function disableButton(playerselection){
@@ -116,10 +113,6 @@ function playgame(playerselection){
     }, 2000);
 
     let playerMove = props.filter(x => x.name == playerselection);
-    // player_1Area.innerHTML = `
-    // <div>${playerMove[0].emoji}</div>
-    // <div>${playerMove[0].name}</div>
-    // `;
     let computerSelection = getComputerMove();
     if(playerselection == computerSelection.name){
         result.innerText = "Draw";
