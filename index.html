@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  </head>
+
+  <body>
+    <div id="game_area">
+      <div id="player_1" class="box">
+        <img id="playerInitialHand" src="img/InitialHand.jpg" />
+        <img id="rockPaperScissrGif" hidden src="img/RockPaperScissor.gif" />
+        <img id="playerRock" hidden src="img/Rock.jpg" />
+        <img id="playerScissor" hidden src="img/Scissor.jpg" />
+        <img id="playerPaper" hidden src="img/Paper.jpg" />
+      </div>
+
+      <div id="mainDiv" class="flex flex-col justify-center items-center">
+        <div>
+          <button
+            id="rockBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
+            onclick="playgame('Rock')"
+          >
+            ROCK
+          </button>
+        </div>
+        <div>
+          <button
+            id="paperBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
+            onclick="playgame('Paper')"
+          >
+            PAPER
+          </button>
+        </div>
+        <div>
+          <button
+            id="scissorBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
+            onclick="playgame('Scissor')"
+          >
+            SCISSOR
+          </button>
+        </div>
+        <div>
+          <button
+            id="resetBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onclick="resetGame()"
+          >
+            RESTART
+          </button>
+        </div>
+        <div id="result" class="text-xl text-green-500">Winner:</div>
+      </div>
+      <div id="computer" class="box">
+        <img
+          id="computerInitialHand"
+          class="flipImage"
+          src="img/InitialHand.jpg"
+        />
+        <img
+          id="computerRockPaperScissrGif"
+          class="flipImage"
+          hidden
+          src="img/RockPaperScissor.gif"
+        />
+        <img id="computerRock" class="flipImage" hidden src="img/Rock.jpg" />
+        <img
+          id="computerScissor"
+          class="flipImage"
+          hidden
+          src="img/Scissor.jpg"
+        />
+        <img id="computerPaper" class="flipImage" hidden src="img/Paper.jpg" />
+      </div>
+    </div>
+    <div class="flex">
+      <div
+        class="text-xl flex-1 text-center text-xl font-extrabold bg-blue-700 text-white"
+      >
+        Player
+      </div>
+      <div class="flex-1 bg-blue-700"></div>
+      <div
+        class="text-xl flex-1 text-center text-xl font-extrabold bg-blue-700 text-white"
+      >
+        Computer
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
